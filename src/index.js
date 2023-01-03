@@ -1,5 +1,6 @@
 const vscode = require("vscode");
 const generateModule = require("./commands/generateModule");
+const generateGetXPattern = require("./commands/generateGetXPattern");
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -9,10 +10,14 @@ function activate(context) {
   );
 
   const commands = [
-	vscode.commands.registerCommand(
-		"arquos-flutter-extension.generateModule",
-		generateModule
-	  )
+    vscode.commands.registerCommand(
+      "arquos-flutter-extension.generateModule",
+      generateModule
+    ),
+    vscode.commands.registerCommand(
+      "arquos-flutter-extension.generateGetXPattern",
+      generateGetXPattern
+    ),
   ];
 
   context.subscriptions.push(commands);
