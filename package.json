@@ -1,7 +1,20 @@
 {
   "name": "arquos-flutter-extension",
-  "displayName": "arquos-flutter-extension",
-  "description": "All tools",
+  "displayName": "Arquos Flutter Extension",
+  "description": "Extension to create an Arquos Application with Flutter",
+  "license": "SEE LICENSE IN LICENSE",
+  "icon": "resource/iconx128.png",
+  "repository": {
+    "url": "https://github.com/OscarTinajero117/arquos-flutter-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OscarTinajero117/arquos-flutter-extension/issues"
+  },
+  "homepage": "https://github.com/OscarTinajero117/arquos-flutter-extension/README.md",
+  "galleryBanner": {
+    "color": "#0072c6",
+    "theme": "dark"
+  },
   "version": "0.0.1",
   "publisher": "oscartinajero117",
   "engines": {
