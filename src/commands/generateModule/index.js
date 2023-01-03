@@ -5,18 +5,19 @@ module.exports = async function (params) {
   const getName = await vscode.window.showInputBox({
     placeHolder: "Insert Module name...",
   });
-  
+
   // VALIDATE MODULE NAME
   if (!getName) {
     vscode.window.showWarningMessage("Module name is required");
     return;
   }
-  const dirName = getName.toLowerCase();
+  const dirName = getName.replace(/\.?([A-Z])/g, (_, y) => `_${y.toLowerCase()}`).replace(/^_/, "");
+
   // VALIDATE IF MODULE ALREADY EXISTS
   const dir = params.path + "/" + dirName;
 
   if (fs.existsSync(dir)) {
-    vscode.window.showWarningMessage("Module "+getName+" already exists");
+    vscode.window.showWarningMessage("Module " + getName + " already exists");
     return;
   }
   try {
