@@ -1,5 +1,4 @@
 const vscode = require("vscode");
-const helloWorld = require("./commands/helloWorld");
 const generateModule = require("./commands/generateModule");
 /**
  * @param {vscode.ExtensionContext} context
@@ -10,14 +9,10 @@ function activate(context) {
   );
 
   const commands = [
-    vscode.commands.registerCommand(
-      "arquos-flutter-extension.helloWorld",
-      helloWorld
-    ),
 	vscode.commands.registerCommand(
 		"arquos-flutter-extension.generateModule",
 		generateModule
-	  ),
+	  )
   ];
 
   context.subscriptions.push(commands);

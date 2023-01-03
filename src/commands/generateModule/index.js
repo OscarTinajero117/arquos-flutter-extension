@@ -92,15 +92,3 @@ const _binding = (name) =>
   "    );\n" +
   "  }\n" +
   "}";
-
-/*
-import 'controller.dart';
-class HomeBinding implements Bindings {
-  @override
-  void dependencies() {
-    Get.lazyPut<HomeController>(
-        () => HomeController(),
-    );
-  }
-}
-*/
