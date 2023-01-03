@@ -1,6 +1,12 @@
 const vscode = require("vscode");
 const fs = require("fs");
 module.exports = async function (params) {
+  // CHECK IF IS IN MODULES FOLDER
+  const lastFolder = params.path.split("/").pop();
+  if (lastFolder !== "modules") {
+    vscode.window.showErrorMessage("Only works in Modules folder");
+    return;
+  }
   // ASK FOR MODULE NAME
   const getName = await vscode.window.showInputBox({
     placeHolder: "Insert Module name...",
