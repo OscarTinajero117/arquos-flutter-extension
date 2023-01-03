@@ -11,14 +11,33 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:arquos-flutter-extension.helloWorld"
+    "onCommand:arquos-flutter-extension.helloWorld",
+    "onCommand:arquos-flutter-extension.generateModule"
   ],
-  "main": "./extension.js",
+  "main": "./src/index.js",
   "contributes": {
-    "commands": [{
-      "command": "arquos-flutter-extension.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "arquos-flutter-extension.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "arquos-flutter-extension.generateModule",
+        "title": "Generate Module"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "arquos-flutter-extension.generateModule",
+          "group": "navigation"
+        },
+        {
+          "command": "arquos-flutter-extension.helloWorld",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "lint": "eslint .",
