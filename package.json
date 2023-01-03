@@ -16,7 +16,7 @@
     "color": "#FFFFFF",
     "theme": "dark"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "oscartinajero117",
   "engines": {
     "vscode": "^1.74.0"
@@ -32,7 +32,8 @@
     "extension"
   ],
   "activationEvents": [
-    "onCommand:arquos-flutter-extension.generateModule"
+    "onCommand:arquos-flutter-extension.generateModule",
+    "onCommand:arquos-flutter-extension.generateGetXPattern"
   ],
   "main": "./src/index.js",
   "contributes": {
@@ -40,14 +41,21 @@
       {
         "command": "arquos-flutter-extension.generateModule",
         "title": "Generate Module"
+      },
+      {
+        "command": "arquos-flutter-extension.generateGetXPattern",
+        "title": "Generate GetX Pattern"
       }
     ],
     "menus": {
       "explorer/context": [
         {
           "command": "arquos-flutter-extension.generateModule",
-          "group": "navigation",
-          "when": "resourceLangId == dart && resourceFilename == main.dart"
+          "group": "navigation"
+        },
+        {
+          "command": "arquos-flutter-extension.generateGetXPattern",
+          "group": "navigation"
         }
       ]
     },
