@@ -7,12 +7,13 @@
   "repository": {
     "url": "https://github.com/OscarTinajero117/arquos-flutter-extension.git"
   },
+  
   "bugs": {
     "url": "https://github.com/OscarTinajero117/arquos-flutter-extension/issues"
   },
   "homepage": "https://github.com/OscarTinajero117/arquos-flutter-extension/README.md",
   "galleryBanner": {
-    "color": "#0072c6",
+    "color": "#FFFFFF",
     "theme": "dark"
   },
   "version": "0.0.1",
@@ -21,7 +22,14 @@
     "vscode": "^1.74.0"
   },
   "categories": [
-    "Other"
+    "Snippets",
+    "Language Packs"
+  ],
+  "keywords": [
+    "dart", 
+    "flutter",
+    "arquos",
+    "extension"
   ],
   "activationEvents": [
     "onCommand:arquos-flutter-extension.generateModule"
@@ -38,10 +46,17 @@
       "explorer/context": [
         {
           "command": "arquos-flutter-extension.generateModule",
-          "group": "navigation"
+          "group": "navigation",
+          "when": "resourceLangId == dart && resourceFilename == main.dart"
         }
       ]
-    }
+    },
+    "snippets": [
+      {
+        "language": "dart",
+        "path": "./src/snippets/snackbar.json"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",

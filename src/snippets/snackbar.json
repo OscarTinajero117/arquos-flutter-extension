@@ -1,0 +1,41 @@
+{
+	"Arquos SnackBar Error": {
+		"scope": "dart",
+		"prefix": "arquosSB-error",
+		"body": [
+			"$0",
+			"arquosSnackBar(",
+				"\ttype: SnackBarType.error,",
+				"\ttitle: '${1:Write title of error}',",
+				"\tmessage: '${2: Write message of error}',",
+		 	");"
+		],
+		"description": "Arquos SnackBar - Error"
+	},
+	"Arquos SnackBar Warning": {
+		"scope": "dart",
+		"prefix": "arquosSB-warning",
+		"body": [
+			"$0",
+			"arquosSnackBar(",
+				"\ttype: SnackBarType.warning,",
+				"\ttitle: '${1:Write title of warning}',",
+				"\tmessage: '${2: Write message of warning}',",
+		 	");"
+		],
+		"description": "Arquos SnackBar - Warning"
+	},
+	"Arquos SnackBar Notification": {
+		"scope": "dart",
+		"prefix": "arquosSB-notification",
+		"body": [
+			"$0",
+			"arquosSnackBar(",
+				"\ttype: SnackBarType.notification,",
+				"\ttitle: '${1:Write title of notification}',",
+				"\tmessage: '${2: Write message of notification}',",
+		 	");"
+		],
+		"description": "Arquos SnackBar - Notification"
+	}
+}
