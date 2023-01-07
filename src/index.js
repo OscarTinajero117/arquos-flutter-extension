@@ -6,7 +6,7 @@ const generateGetXPattern = require("./commands/generateGetXPattern");
  */
 function activate(context) {
   console.log(
-    'Congratulations, your extension "arquos-flutter-extension" is now active!'
+    'Congratulations, your extension "Arquos Flutter Extension" is now active!'
   );
 
   const commands = [
