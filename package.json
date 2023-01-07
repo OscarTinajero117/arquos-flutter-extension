@@ -16,7 +16,7 @@
     "color": "#FFFFFF",
     "theme": "dark"
   },
-  "version": "0.0.2",
+  "version": "0.0.1",
   "publisher": "oscartinajero117",
   "engines": {
     "vscode": "^1.74.0"
