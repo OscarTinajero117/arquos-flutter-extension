@@ -22,13 +22,12 @@
   },
   "categories": [
     "Snippets",
-    "Language Packs"
+    "Other"
   ],
   "keywords": [
     "dart", 
     "flutter",
-    "arquos",
-    "extension"
+    "arquos"
   ],
   "activationEvents": [
     "onCommand:arquos-flutter-extension.generateModule",
@@ -50,11 +49,11 @@
       "explorer/context": [
         {
           "command": "arquos-flutter-extension.generateModule",
-          "group": "navigation"
+          "group": "oscartinajero117"
         },
         {
           "command": "arquos-flutter-extension.generateGetXPattern",
-          "group": "navigation"
+          "group": "oscartinajero117"
         }
       ]
     },

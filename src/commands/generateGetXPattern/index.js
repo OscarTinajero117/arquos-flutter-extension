@@ -1,6 +1,6 @@
 const vscode = require("vscode");
 const fs = require("fs");
-const mkdirp = require("mkdirp");
+// const mkdirp = require("mkdirp");
 
 module.exports = async function (params) {
   // CHECK IF IS IN MODULES FOLDER
@@ -23,7 +23,7 @@ module.exports = async function (params) {
       getResponse === "Yes" ||
       getResponse === "YES"
     ) {
-      fs.rmdirSync(dir, { recursive: true });
+      fs.rmSync(dir, { recursive: true });
       _actionPattern(dir);
     } else {
       vscode.window.showWarningMessage("Operation canceled");
@@ -44,6 +44,7 @@ const _actionPattern = (dir) => {
 
 const _createDirectory = (dir) => {
   const directories = [
+    `${dir}`,
     `${dir}/data`,
     `${dir}/data/enums`,
     `${dir}/data/models`,
@@ -66,6 +67,6 @@ const _createDirectory = (dir) => {
     `${dir}/core/utils/isolates`,
   ];
   for (const directory of directories) {
-    mkdirp.sync(directory);
+   fs.mkdirSync(directory);
   }
 };
